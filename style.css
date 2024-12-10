@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+  
+  
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.topo, a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    padding: 20px;   
+}
+
+
+.home{
+    background-image: url(/img/pexels-narda-yescas-1566837.jpg);
+    display: flex; /* Habilita o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+}
+
+.home-texto{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+.cardapio > h2{
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 30px;
+}
+ 
+.home-texto > button{
+    padding: 15px;
+    border-radius: 25px;
+    background-color: yellow;
+    color: red;
+    font-size: larger;
+}
+
+.container {
+    margin-top: 30px;
+    display: flex; /* Itens em linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens no contêiner */
+  }
+
+  /* Cada item (imagem + descrição) */
+  .item {
+    display: flex;
+    flex-direction: column; /* Alinha a imagem e a descrição verticalmente */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+    width: 200px; /* Largura de cada item */
+  }
+
+  /* Estilo para a imagem */
+  .image {
+    width: 200px;
+    height: 150px;
+    background-image: url('/img/pexels-engin-akyurt-2260208.jpg'); /* Substitua pelo caminho da imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center; /* Centraliza a imagem */
+    border: 2px solid #ddd; /* Borda opcional */
+    border-radius: 5px; /* Arredondamento opcional */
+  }
+
+  /* Caixa retangular abaixo da imagem */
+  .description {
+    margin-top: 10px; /* Espaço entre a imagem e a descrição */
+    background-color: rgb(241, 239, 117); /* Cor de fundo da caixa */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda da caixa */
+    border-radius: 5px; /* Arredondamento opcional */
+    font-size: 14px; /* Tamanho do texto */
+  }
+
+.sobre-nos{
+    background-image: url(/img/pexels-eneida-nieves-905847.jpg);
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    margin-top: 10px;
+}
+ 
+.about{
+    text-align: center;
+    color: white; 
+    margin-top: 25px;  
+    padding-top: 50px;
+  
+}   
+
+
+.endereco {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  align-items: center;
+ 
+ }
+  .end {
+    margin-left: 3vh;
+  }
+
+  .box{
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .end > p > a {
+    color: rgb(36, 32, 245);
+  }
+
+.btn > button{
+    padding: 15px;
+    border-radius: 25px;
+    background-color: yellow;
+    color: red;
+    font-size: larger;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+footer{
+    background-color: black;
+}
+
+footer > p{
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
