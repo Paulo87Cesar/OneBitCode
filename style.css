@@ -1,4 +1,5 @@
-* {
+
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,17 +27,18 @@ a {
 header {
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 nav ul {
   list-style: none;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav li {
-  display: inline;
-  margin: 0 1.5rem;
+  margin: 0.5rem 0;
 }
 
 nav a {
@@ -44,22 +46,33 @@ nav a {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 0 1.5rem;
+  }
+}
+
 .hero {
   background-image: url("img/pexels-narda-yescas-1566837.jpg");
   background-size: cover;
   color: var(--color-white);
-  min-height: 75vh;
-  padding: 10rem 0;
+  min-height: 50vh;
+  padding: 5rem 1rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 100;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-top: 1.5rem;
 }
 
@@ -76,12 +89,12 @@ nav a {
 }
 
 section:not(#home) {
-  padding: 4rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -91,16 +104,17 @@ p {
 
 .menu-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
 }
 
 .menu-list > li {
   background-color: var(--color-light);
   border-radius: .5rem;
   box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  margin: 1.5rem;
-  height: 28rem;
-  width: 28rem;
+  height: auto;
   text-align: left;
 }
 
@@ -142,77 +156,35 @@ address > * {
 footer {
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
-section:not(#home) {
-  padding: 4rem;
-  text-align: center;
+@media (min-width: 768px) {
+  .hero {
+    padding: 10rem 0;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  section:not(#home) {
+    padding: 4rem;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+@media (min-width: 1024px) {
+  .menu-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-p {
-  font-size: 1.25rem;
-}
-
-.menu-list {
-  list-style: none;
-}
-
-.menu-list > li {
-  background-color: var(--color-light);
-  border-radius: .5rem;
-  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  margin: 1.5rem;
-  height: 28rem;
-  width: 28rem;
-  text-align: left;
-}
-
-.menu-list img {
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-  object-fit: cover;
-  width: 100%;
-}
-
-.menu-list h3,
-.menu-list p {
-  padding: 1rem 1.25rem 0;
-}
-
-#about {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-    ),
-    url("img/pexels-eneida-nieves-905847.jpg");
-  background-size: cover;
-  background-position: center;
-  color: var(--color-white);
-}
-
-address {
-  margin: 2rem 0;
-  font-style: italic;
-}
-
-address > * {
-  display: inline-block;
-  margin: 1.5rem;
-  text-align: left;
-}
-
-footer {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  padding: 2rem;
-  text-align: center;
-}
